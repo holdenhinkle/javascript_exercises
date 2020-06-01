@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Add Staff</title>
+  </head>
+  <body>
+    <h1>Add Staff Schedule</h1>
+    <a href="#" id="another">Add more schedules</a>
+    <form method="post" action="/api/schedules">
+      <input type="submit" value="Add Staff">
+    </form>
+    <script id="schedule_fieldset" type="text/template">
+      <fieldset>
+        <legend>Schedule NUMBER</legend>
+        <div>
+          <label for="name_NUMBER">Staff Name</label>
+          <select name="name_NUMBER" id="name_NUMBER">
+          </select>
+        </div>
+        <div>
+          <label for="date_NUMBER">Date</label>
+          <input type="date" id="date_NUMBER" name="date_NUMBER">
+        </div>
+        <div>
+          <label for="time_NUMBER">Time</label>
+          <input type="time" id="time_NUMBER" name="time_NUMBER">
+        </div>
+      </fieldset>  
+    </script>
+    <script src="add_schedules.js"></script>
+  </body>
+</html>

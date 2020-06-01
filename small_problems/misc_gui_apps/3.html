@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Todos</title>
+  <link rel="stylesheet" href="3.css">
+</head>
+<body>
+  <h1>Todos</h1>
+  <div id="todos">
+  </div>
+  <div id="cover" class="hide">
+    <div id="popup">
+      <h2>Are you sure you want to delete this todo?</h2>
+      <a href="#" id="yes">Yes</a>
+      <a href="#" id="no">No</a>
+    </div>
+  </div>
+  <script id='todoList' type='text/x-handlebars'>
+    <ul>
+      {{#each todos}}
+      {{> todosTemplate}}
+      {{/each}}
+    </ul>
+  </script>
+  <script id='todosTemplate' type='text/x-handlebars'>
+    <li>{{title}} | <a href="#" data-id={{id}}>delete</a></li>
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="handlebars-v4.4.3.js"></script>
+  <script src="3.js"></script>
+</body>
+</html>

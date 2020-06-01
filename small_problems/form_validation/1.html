@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Form Validation, Part 1</title>
+    <link href="1.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Form Validation</h1>
+    <form method="post" action="#" novalidate="true">
+      <div>
+        <label for="firstName">First name</label>
+        <input type="text" id="firstName" name="firstName" required pattern="[a-zA-Z]{2,}">
+      </div>
+      <div>
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName" name="lastName" required pattern="[a-zA-Z]{2,}">
+      </div>
+      <div>
+        <label for="email">Email address</label>
+        <input type="text" id="email" name="email" required pattern=".+@.+">
+      </div>
+      <div>
+        <label for="phone">Phone number</label>
+        <input type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" required pattern=".{10,}">
+      </div>
+      <div>
+        <label for="cc1">Credit card</label>
+        <input type="text" id="cc1" name="cc">-
+        <input type="text" id="cc2" name="cc">-
+        <input type="text" id="cc3" name="cc">-
+        <input type="text" id="cc4" name="cc">
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+    <h2>Serialized Form</h2>
+    <p id="serialized"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script = src="1.js"></script>
+  </body>
+</html>

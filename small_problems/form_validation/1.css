@@ -1,0 +1,12 @@
+.invalid-form {
+  color: red;
+  font-size: 24px;
+}
+
+.invalid-input {
+  color: red;
+}
+
+.invalid-input input {
+  border-color: red;
+}
